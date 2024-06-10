@@ -19,7 +19,24 @@ input format:
 example 1: 1 2 3 4 5
 example 2: 12 212 23
 example 3: 1.23 2.12 43.3 43.3
-example 4: hari jai krish mani
+example 4: hari jai krish mani   
+```
+
+### `CODE`
+
+```python
+# example 1:
+# input: 1 2 3 4 5
+li = list(map(int,input().split()))
+# example 2: 
+# input: 12 212 23
+li = list(map(int,input().split()))
+# example 3: 
+# input: 1.23 2.12 43.3 43.3
+li = list(map(float,input().split()))
+# example 4:
+# input: hari jai krish mani   
+li = input().split()
 ```
 
 ### `CODE`
