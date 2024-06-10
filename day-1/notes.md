@@ -1,4 +1,4 @@
-# Formats that can be asked in problem solving
+# `Input` Formats that can be asked in problem solving
 
 ## basic single values
 
