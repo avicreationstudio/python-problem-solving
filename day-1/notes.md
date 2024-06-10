@@ -92,3 +92,36 @@ for i in range(rc):
     row = list(map(int,input().split()))
     matrix.append(row)
 ```
+
+# `Print`
+
+```python
+
+# print(*args, sep=' ', end='\n')
+#     
+#     sep
+#       string inserted between values, default a space.
+#     end
+#       string appended after the last value, default a newline.
+#     
+```
+
+example 1
+
+```python
+li = ['samsung', 'iphone','nokia','oppo','vivo']
+print(*li,sep=" and ")
+# samsung and iphone and nokia and oppo and vivo 
+```
+
+example 2
+
+```python
+li = [1,2,3,4]
+n = len(li)
+for i in range(n):
+   print(li[i],end=",")
+#  1,2,3,4,
+```
+
+NOTE: we will see how to remove last , in upcoming section.
