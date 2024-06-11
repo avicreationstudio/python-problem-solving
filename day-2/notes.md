@@ -26,6 +26,7 @@
 - =
   - a,b = 1,2
 - arithmetic operator
+- unary +, unary - : it is called unary +, - because it has only one operand.
 - +,- ( addition and subtraction )
 - *, / ( divition ), // ( floor division ), % ( modulus )
   - `2+3+5`
@@ -158,3 +159,33 @@ complex
 - `not`
 
 ---
+
+### ``
+
+### `walrus operator : :=`
+
+```python
+a = 0
+if a:
+    print("true block")
+else:
+    print("false block")
+```
+
+```python
+a = 0
+if a:=1:
+    print("true block")
+else:
+    print("false block")
+```
+
+another use case
+
+```python
+def fn(x):
+  print(x)
+
+fn(a:=100)
+print(a) # 100
+```
