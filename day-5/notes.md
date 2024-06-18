@@ -1,4 +1,4 @@
-# thory
+# theory
 
 ## ternary operator
 
@@ -14,7 +14,7 @@ a,b,c = 12,2,12
 max_val = a if a>b and a>c else b if b>a and b>c else c 
 
 a,b,c,d = 12,2,12,2
-max_val = a if a>b and a>c and a>d else b if b>a and b>c and b>d else c if c>a and c>b and c>d else d
+res = a if a>b and a>c and a>d else b if b>a and b>c and b>d else c if c>a and c>b and c>d else d
 ```
 
 `NOTE: the above code will follow R->L associativity`
