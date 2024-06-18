@@ -6,7 +6,7 @@ different types of number representation available in python
 they are
 
 1. (2)  binary     :  eg, 0b1010 or 0B1010
-1. (8)  octal      :  eg, 0o8 or 0O8
+1. (8)  octal      :  eg, 0o7 or 0O7
 1. (10) decimal    :  eg, 24
 1. (16) hexadecimal:  eg, 0xA or 0XB
 
