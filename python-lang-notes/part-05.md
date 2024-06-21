@@ -11,10 +11,17 @@ nesting if else
 
 ```python
 a,b,c = 12,2,12
-max_val = a if a>b and a>c else b if b>a and b>c else c 
+max_val = a if a>=b and a>=c else b if b>=a and b>=c else c 
 
 a,b,c,d = 12,2,12,2
-res = a if a>b and a>c and a>d else b if b>a and b>c and b>d else c if c>a and c>b and c>d else d
+greatest = a 
+if b >= greatest:
+    greatest = b
+if c >= greatest:
+    greatest = c
+if d >= greatest:
+    greatest = d
+print(greatest)
 ```
 
 `NOTE: the above code will follow R->L associativity`
@@ -258,6 +265,13 @@ a = 5  # (binary: 0101)
 
 result = ~a  # (binary: 1010, which is -6 in decimal due to two's complement representation)
 print(result)  # Output: -6
+
+# ~ will change sign bit also.
+
+# 1010
+# 0101 <- 1s compliment
+#    1 <- 2s compliment
+# 0110 <- result (6)
 
 ```
 

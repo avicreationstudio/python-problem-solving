@@ -94,6 +94,18 @@
 >>> 2**0.5 # 
 ```
 
+```python
+# other examples
+>>> 4**2
+>>> 5*4**2
+>>> -3**2
+>>> (-3)**2
+>>> 4**0.5
+>>> 4**-0.5
+>>> 4**-2
+
+```
+
 `usage`
 
 - square root
@@ -189,3 +201,11 @@ def fn(x):
 fn(a:=100)
 print(a) # 100
 ```
+
+`ADDITIONAL NOTES`
+
+## REPL
+
+REPL stands for Read-Eval-Print Loop. It is an interactive programming environment that takes user inputs (one at a time), evaluates them, and returns the result to the user. This process is repeated in a loop, hence the name "Read-Eval-Print Loop."
+
+---
