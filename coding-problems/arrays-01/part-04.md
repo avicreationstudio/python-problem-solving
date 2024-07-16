@@ -26,6 +26,36 @@ To solve this problem efficiently, we can use Moore's Voting Algorithm, which id
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of elements in the array. We make a single pass through the array.
 - **Space Complexity**: \(O(1)\), since the algorithm uses constant extra space.
 
+#### code implementation in python
+
+```python
+def majorityElement(nums):
+    candidate = 0
+    count = 0
+
+    for num in nums:
+        if count == 0:
+            candidate = num
+        if num == candidate:
+            count += 1 
+        else:
+            count -= 1
+
+    return candidate
+
+# Utility function to print the result
+def printResult(result):
+    print(f"Majority Element: {result}")
+
+if __name__ == "__main__":
+    nums = [3, 2, 3]
+
+    result = majorityElement(nums)
+
+    printResult(result)
+
+```
+
 #### Code Implementation in C++
 
 ```cpp

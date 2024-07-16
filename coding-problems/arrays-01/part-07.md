@@ -1,32 +1,105 @@
 # Problem: Next Greater Element II
 
+    Next Greater Element (NGE) for every element in given Array
+
 **Problem Description:**
 
-Given a circular array `nums` (the next element of the last element is the first element of the array), find the Next Greater Number for every element. The Next Greater Number of a number `x` is the first greater number to its traversing-order next in the array, which means you could search circularly to find its next greater number. If it doesn't exist, output `-1` for this number.
+The Next greater Element for an element x is the first greater element on the right side of x in the array. Elements for which no greater element exist, consider the next greater element as -1.
 
 For example:
 
-- Input: `nums = [1, 2, 1]`
-- Output: `[2, -1, 2]`
-- Explanation:
-  - For `nums[0] = 1`, the next greater number is `2`.
-  - For `nums[1] = 2`, there is no greater number to its right, so we return `-1`.
-  - For `nums[2] = 1`, the next greater number is `2` (circularly).
+    Input: arr[] = [ 4 , 5 , 2 , 25 ]
+    Output:        4      –>   5
+                   5      –>   25
+                   2      –>   25
+                   25     –>   -1
+    Explanation: except 25 every element has an element greater than them present on the right side
+    
+    Input: arr[] = [ 13 , 7, 6 , 12 ]
+    Output:         13      –>    -1
+                    7       –>     12
+                    6       –>     12
+                    12      –>     -1
+    Explanation: 13 and 12 don’t have any element greater than them present on the right side
 
 ### Solution
 
-To solve this problem efficiently, we can modify the approach using a stack-based method similar to the previous problem, but considering the circular nature of the array.
+1. Initialization:
 
-#### Steps
+    `stack`: Used to keep track of elements for which we need to find the next greater element.
+    `nge_dict`: A dictionary to store the next greater element for each element in the array.
 
-1. **Double the Array**: Concatenate the array with itself to handle the circular property without explicitly looping back.
-2. **Stack Usage**: Use a stack to find next greater elements in the doubled array.
-3. **Result Construction**: Iterate through the original array and use results from the stack to build the final result.
+1. Main Logic:
+
+- Iterate through each element in the array:
+  - While the stack is not empty and the top element of the stack is less than the current element:
+    - Pop the element from the stack and set its next greater element in `nge_dict` to the current element.
+  - Push the current element onto the stack.
+
+1. Post-processing:
+    - After iterating through the array, for any remaining elements in the stack, set their next greater element to `-1` in `nge_dict`.
+1. Printing Results:
+    - Iterate through the original array and print the next greater element for each element using `nge_dict`.
 
 #### Time and Space Complexity
 
 - **Time Complexity**: \(O(n)\), where \(n\) is the size of the array `nums`. We make a single pass over the doubled array to find the next greater elements.
 - **Space Complexity**: \(O(n)\), for the stack used to store indices of elements in the array.
+
+#### Code implementation in python
+
+`O(n^2)`
+
+```python
+# Function to print element and NGE pair for all elements of list
+def printNGE(arr):
+
+    for i in range(0, len(arr), 1):
+
+        next = -1
+        for j in range(i+1, len(arr), 1):
+            if arr[i] < arr[j]:
+                next = arr[j]
+                break
+
+        print(str(arr[i]) + " -- " + str(next))
+
+
+# Driver program to test above function
+arr = [11, 13, 21, 3]
+printNGE(arr)
+
+
+```
+
+`O(n)`
+
+```python
+def printNGE(arr):
+    stack = []  # Initialize stack as a list
+
+    # Dictionary to store the next greater element for each element in arr
+    nge_dict = {}
+
+    # Iterate through each element in the array
+    for num in arr:
+        # While stack is not empty and the top element is less than the current element
+        while stack and stack[-1] < num:
+            nge_dict[stack.pop()] = num
+        stack.append(num)
+
+    # For remaining elements in stack, there is no next greater element
+    while stack:
+        nge_dict[stack.pop()] = -1
+
+    # Print next greater elements
+    for num in arr:
+        print(f"{num} -- {nge_dict[num]}")
+
+# Driver program to test above function
+arr = [11, 13, 21, 3]
+printNGE(arr)
+```
 
 #### Code Implementation in C++
 

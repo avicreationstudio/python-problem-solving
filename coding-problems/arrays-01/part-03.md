@@ -25,6 +25,44 @@ To solve this problem efficiently, we can use a hash table (unordered_map in C++
 
 #### Code Implementation in C++
 
+#### python
+
+```python
+def twoSum(nums, target):
+    hashTable = {}  # Hash table to store the complement and index
+
+    for i, num in enumerate(nums):
+        complement = target - num
+
+        # Check if the complement exists in the hash table
+        if complement in hashTable:
+            return [hashTable[complement], i]  # Return the indices of the two numbers
+
+        # Store the index of the current element in the hash table
+        hashTable[num] = i
+
+    # If no solution is found, return an empty list (though the problem guarantees a solution)
+    return []
+
+# Utility function to print the result
+def printResult(result):
+    if len(result) == 2:
+        print(result[0], result[1])
+    else:
+        print("No solution found.")
+
+if __name__ == "__main__":
+    nums = [2, 7, 11, 15]
+    target = 9
+
+    result = twoSum(nums, target)
+
+    printResult(result)
+
+```
+
+#### cpp
+
 ```cpp
 #include <iostream>
 #include <unordered_map>

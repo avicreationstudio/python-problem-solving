@@ -33,9 +33,37 @@ To solve this problem efficiently, we can use a stack-based approach to track el
 - **Time Complexity**: \(O(m + n)\), where \(m\) and \(n\) are the sizes of `nums1` and `nums2` respectively. We make two passes over `nums2`, one with the stack and one to build the result for `nums1`.
 - **Space Complexity**: \(O(m + n)\), for the stack and the hash map used to store next greater elements.
 
-#### Code Implementation in C++
+#### Code Implementation in python
 
-<!-- ```cpp
+```python
+
+def fn(nums1, nums2):
+    stack = []
+    nextGreater = {}
+
+    for i in range(len(nums2)-1,-1,-1):
+        while len(stack) != 0 and stack[-1] <= nums2[i]:
+            stack.pop()
+        
+        nextGreater[nums2[i]] = -1 if len(stack) == 0 else stack[-1]
+        stack.append(nums2[i])
+    
+    result = []
+    print(nextGreater)
+    for x in nums1:
+        result.append(nextGreater[x])
+    
+    return result
+
+nums1 = [4,1,2]
+nums2 = [1,3,4,2]
+result = fn(nums1,nums2)
+print(*result)
+```
+
+### Code Implementation in C++
+
+```cpp
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -83,32 +111,6 @@ int main() {
 
     return 0;
 }
-``` -->
-
-```python
-
-def fn(nums1, nums2):
-    stack = []
-    nextGreater = {}
-
-    for i in range(len(nums2)-1,-1,-1):
-        while len(stack) != 0 and stack[-1] <= nums2[i]:
-            stack.pop()
-        
-        nextGreater[nums2[i]] = -1 if len(stack) == 0 else stack[-1]
-        stack.append(nums2[i])
-    
-    result = []
-    print(nextGreater)
-    for x in nums1:
-        result.append(nextGreater[x])
-    
-    return result
-
-nums1 = [4,1,2]
-nums2 = [1,3,4,2]
-result = fn(nums1,nums2)
-print(*result)
 ```
 
 ### Explanation

@@ -29,6 +29,34 @@ To solve this problem efficiently, we can use a single pass approach to keep tra
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of elements in the array. We make a single pass through the array.
 - **Space Complexity**: \(O(1)\), since the algorithm uses constant extra space.
 
+#### Code Implementation in Python
+
+```python
+def maxProfit(prices):
+    minPrice = float('inf') # this will give you infinite value
+    maxProfit = 0
+
+    for price in prices:
+        if price < minPrice:
+            minPrice = price
+        elif (price - minPrice) > maxProfit:
+            maxProfit = (price - minPrice)
+
+    return maxProfit
+
+# Utility function to print the result
+def printResult(result):
+    print(f"Maximum Profit: {result}")
+
+if __name__ == "__main__":
+    prices = [7, 1, 5, 3, 6, 4]
+
+    result = maxProfit(prices)
+
+    printResult(result)
+
+```
+
 #### Code Implementation in C++
 
 ```cpp
@@ -66,3 +94,4 @@ int main() {
 
     return 0;
 }
+```

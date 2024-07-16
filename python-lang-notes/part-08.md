@@ -18,7 +18,7 @@ def fn():
     # as it is declared inside function.
     # it act as a local variable. So it will consume RAM only on its execution
 fn()
-# Once function logic is executed. 
+# Once after function logic is executed. 
 # The memory used to run the logic inside function will
 # get removed from memory.
 

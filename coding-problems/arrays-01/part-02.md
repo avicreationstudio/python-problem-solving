@@ -36,20 +36,30 @@ There are multiple ways to solve this problem. One efficient way is to use array
 ### solution ( python )
 
 ```python
-def reverse(li, start, end):
+# Function to reverse a part of the array
+def reverse(arr, start, end):
     while start < end:
         arr[start], arr[end] = arr[end], arr[start]
-        
+        start += 1
+        end -= 1
 
-def rotate(li):
-    # step 1
-    
-    
+# Function to rotate the array to the right by k steps
+def rotate(arr, k):
+    n = len(arr)
+    k = k % n  # In case k is greater than n
+    reverse(arr, 0, n - 1)
+    reverse(arr, 0, k - 1)
+    reverse(arr, k, n - 1)
 
-li = [1, 2, 3, 4, 5, 6, 7]
-n = len(li)
-k = 3 
+# Utility function to print the array
+def printArray(arr):
+    print(" ".join(map(str, arr)))
 
+if __name__ == "__main__":
+    arr = [1, 2, 3, 4, 5, 6, 7]
+    k = 3
+    rotate(arr, k)
+    printArray(arr)
 
 ```
 

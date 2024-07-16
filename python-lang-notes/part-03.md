@@ -170,9 +170,24 @@ complex
 - `or`
 - `not`
 
----
+```python
+>>> 10 and 20 and 0 and 100 and 200
+0
+>>> 10 and 20 and [] and 20 and (1,2)
+[]
 
-### ``
+# in above cases. It will convert each and every thing into its boolean type then evaluates. Once it stop evaluation it will through the ans. 
+# 10 -> bool(10)  -> True
+# 20 -> bool(20)  -> True
+# [] -> bool([])  -> False
+# 20 -> bool(20)  -> True
+
+# As we are using only `and`. Python will stop once it gets 
+# False ( bool([]) -> False ).
+# so only we got output as `[]`
+```
+
+---
 
 ### `walrus operator : :=`
 
