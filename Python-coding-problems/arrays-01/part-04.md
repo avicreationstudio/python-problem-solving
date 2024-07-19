@@ -143,3 +143,23 @@ int main() {
 - **Input**: `nums = [8, 8, 7, 7, 7, 7, 7, 8, 8, 7, 7]`
 - **Output**: `7`
 - **Explanation**: The majority element is `7` as it appears seven times in the array.
+
+#### leet code
+
+<https://leetcode.com/problems/majority-element/>
+
+```python
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        candidate = 0
+        vote = 0
+        for num in nums:
+            if vote == 0:
+                candidate = num
+            if num == candidate:
+                vote += 1
+            else:
+                vote -= 1
+        return candidate
+        
+```

@@ -56,7 +56,7 @@ if __name__ == "__main__":
     printResult(result)
 
 ```
-
+<!-- 
 #### Code Implementation in C++
 
 ```cpp
@@ -94,4 +94,22 @@ int main() {
 
     return 0;
 }
+``` -->
+
+#### leet code
+
+<https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/>
+
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        minPrice = float('inf')
+        maxProfit = 0
+
+        for price in prices:
+            if price < minPrice:
+                minPrice = price
+            elif (price - minPrice) > maxProfit:
+                maxProfit = (price - minPrice)
+        return maxProfit
 ```
