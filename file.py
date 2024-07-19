@@ -1,29 +1,22 @@
-def groupAnagrams(strs):
-    anagram_groups = {}
+from abc import ABC, abstractmethod
 
-    # Group anagrams using a dictionary
-    for str in strs:
-        sorted_str = ''.join(sorted(str))
-        if sorted_str in anagram_groups:
-            anagram_groups[sorted_str].append(str)
-        else:
-            anagram_groups[sorted_str] = [str]
+class Chassis(ABC):
+    # here 👇 If I inherited `Chassis` class,
+    # then for sure you should have a function named `tyreDetails` 
+	# and it should have logic implemented
+    @abstractmethod 
+    def tyreDetails(self):
+        pass
+		
+class Jeep(Chassis):
+    def tyreDetails(self):
+        self.details = ["MRF",100,23.23]
+        return self.details
+        
+class Swift(Chassis):
+	def tyreDetails(self):
+		self.details = ["Apollo",30,10.03]
+		return self.details
 
-    # Convert dictionary values to result format
-    result = list(anagram_groups.values())
-    return result
-
-# Utility function to print the result
-def printResult(result):
-    print("[")
-    for group in result:
-        print("  [", ", ".join(f'"{s}"' for s in group), "],")
-    print("]")
-
-if __name__ == "__main__":
-    strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
-
-    result = groupAnagrams(strs)
-
-    print("Grouped Anagrams:")
-    printResult(result)
+car1 = Swift()
+car2 = Jeep()

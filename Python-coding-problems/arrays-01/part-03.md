@@ -23,8 +23,6 @@ To solve this problem efficiently, we can use a hash table (unordered_map in C++
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of elements in the array. We traverse the array once, and lookups in the hash table are \(O(1)\) on average.
 - **Space Complexity**: \(O(n)\), due to the additional space required for the hash table.
 
-#### Code Implementation in C++
-
 #### python
 
 ```python
@@ -60,7 +58,7 @@ if __name__ == "__main__":
     printResult(result)
 
 ```
-
+<!-- 
 #### cpp
 
 ```cpp
@@ -110,7 +108,7 @@ int main() {
     return 0;
 }
 
-```
+``` -->
 
 ### Explanation
 
@@ -119,3 +117,35 @@ int main() {
 - `Complement Check:` We check if the complement exists in the hash table. If it does, we have found the two indices whose elements sum up to the target, and we return these indices.
 - `Hash Table Update:
 - ` If the complement does not exist in the hash table, we store the current element and its index in the hash table for future reference.
+
+## Test Cases
+
+### Test Case 1
+
+- **Input**: `nums = [2, 7, 11, 15]`, `target = 9`
+- **Output**: `[0, 1]`
+- **Explanation**: `nums[0] + nums[1] == 9`, so we return `[0, 1]`.
+
+### Test Case 2
+
+- **Input**: `nums = [3, 2, 4]`, `target = 6`
+- **Output**: `[1, 2]`
+- **Explanation**: `nums[1] + nums[2] == 6`, so we return `[1, 2]`.
+
+### Test Case 3
+
+- **Input**: `nums = [3, 3]`, `target = 6`
+- **Output**: `[0, 1]`
+- **Explanation**: `nums[0] + nums[1] == 6`, so we return `[0, 1]`.
+
+### Test Case 4
+
+- **Input**: `nums = [1, 2, 3, 4, 5]`, `target = 9`
+- **Output**: `[3, 4]`
+- **Explanation**: `nums[3] + nums[4] == 9`, so we return `[3, 4]`.
+
+### Test Case 5
+
+- **Input**: `nums = [0, 4, 3, 0]`, `target = 0`
+- **Output**: `[0, 3]`
+- **Explanation**: `nums[0] + nums[3] == 0`, so we return `[0, 3]`.

@@ -55,7 +55,7 @@ if __name__ == "__main__":
     printResult(result)
 
 ```
-
+<!-- 
 #### Code Implementation in C++
 
 ```cpp
@@ -92,10 +92,54 @@ int main() {
 
     return 0;
 }
-```
+``` -->
 
 ### Explanation
 
 - `Candidate Selection:` Start with the first element as the candidate `(candidate = nums[0])` and initialize a counter `(count = 0)`.
 - `Vote Counting:` Iterate through the array. If the counter is zero, update the candidate. Increment or decrement the counter based on whether the current element matches the candidate.
 - `Validation:` After completing the iteration, the candidate variable holds the majority element.
+
+## Test Cases
+
+### Test Case 1
+
+- **Input**: `nums = [3, 2, 3]`
+- **Output**: `3`
+- **Explanation**: The majority element is `3` as it appears twice in the array.
+
+### Test Case 2
+
+- **Input**: `nums = [2, 2, 1, 1, 1, 2, 2]`
+- **Output**: `2`
+- **Explanation**: The majority element is `2` as it appears four times in the array.
+
+### Test Case 3
+
+- **Input**: `nums = [1]`
+- **Output**: `1`
+- **Explanation**: The majority element is `1` as it is the only element in the array.
+
+### Test Case 4
+
+- **Input**: `nums = [1, 1, 2, 2, 1]`
+- **Output**: `1`
+- **Explanation**: The majority element is `1` as it appears three times in the array.
+
+### Test Case 5
+
+- **Input**: `nums = [4, 4, 4, 4, 1, 2, 3, 4, 4]`
+- **Output**: `4`
+- **Explanation**: The majority element is `4` as it appears six times in the array.
+
+### Test Case 6
+
+- **Input**: `nums = [5, 5, 5, 2, 5, 3, 5, 1, 5]`
+- **Output**: `5`
+- **Explanation**: The majority element is `5` as it appears five times in the array.
+
+### Test Case 7
+
+- **Input**: `nums = [8, 8, 7, 7, 7, 7, 7, 8, 8, 7, 7]`
+- **Output**: `7`
+- **Explanation**: The majority element is `7` as it appears seven times in the array.

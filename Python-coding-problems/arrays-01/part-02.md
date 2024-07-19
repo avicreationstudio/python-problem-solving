@@ -6,8 +6,8 @@ Given an array, rotate the array to the right by k steps, where k is non-negativ
 
 ### For example
 
-- Input: nums = [1, 2, 3, 4, 5, 6, 7], k = 3
-- Output: [5, 6, 7, 1, 2, 3, 4]
+- `Input`: nums = [1, 2, 3, 4, 5, 6, 7], k = 3
+- `Output`: [5, 6, 7, 1, 2, 3, 4]
 
 Explanation
 
@@ -33,7 +33,7 @@ There are multiple ways to solve this problem. One efficient way is to use array
 
 `Space Complexity`: O(1), since we perform the rotations in place and do not use extra space proportional to the input size.
 
-### solution ( python )
+### Solution ( python )
 
 ```python
 # Function to reverse a part of the array
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
 ```
 
-### array solution ( CPP )
+<!-- ### array solution ( CPP )
 
 ```CPP
 #include <iostream>
@@ -111,7 +111,6 @@ int main() {
 
     return 0;
 }
-
 
 ```
 
@@ -165,4 +164,36 @@ int main() {
     return 0;
 }
 
-```
+``` -->
+
+### For example
+
+- Input: nums = [1, 2, 3, 4, 5, 6, 7], k = 3
+- Output: [5, 6, 7, 1, 2, 3, 4]
+
+## Test Cases
+
+### Test Case 1
+
+- **Input**: nums = [1, 2, 3, 4, 5], k = 2
+- **Output**: [4, 5, 1, 2, 3]
+
+### Test Case 2
+
+- **Input**: nums = [1, 2, 3, 4, 5, 6], k = 4
+- **Output**: [3, 4, 5, 6, 1, 2]
+
+### Test Case 3
+
+- **Input**: nums = [1, 2, 3], k = 1
+- **Output**: [3, 1, 2]
+
+### Test Case 4
+
+- **Input**: nums = [1, 2, 3, 4], k = 0
+- **Output**: [1, 2, 3, 4] (No rotation)
+
+### Test Case 5
+
+- **Input**: nums = [7, 8, 9, 10], k = 3
+- **Output**: [8, 9, 10, 7]

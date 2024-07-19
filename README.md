@@ -10,3 +10,5 @@ list of important coding problems and its slolutions
 # python language notes
 
 from basic to edge cases, python notes will be available.
+
+<https://github.com/avicreationstudio/python-problem-solving>

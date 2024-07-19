@@ -62,11 +62,13 @@ void bubbleSort(int arr[], int n) {
 
 ```
 
-## most cases we will be using vector over array
+![](https://he-s3.s3.amazonaws.com/media/uploads/ece920b.png)
 
-### Arrays
+<!-- ## most cases we will be using vector over array -->
 
-- `Fixed Size:`Arrays have a fixed size that is determined at compile time and cannot be changed during runtime.
+<!-- ### Arrays
+
+- `Fixed Size:`Arrays have a fixed size that is determined at https://he-s3.s3.amazonaws.com/media/uploads/ece920b.pngcompile time and cannot be changed during runtime.
 - `Static Allocation:` Memory for arrays is allocated statically (on the stack or globally) or dynamically (on the heap using new).
 - `Direct Access:` Elements in an array are accessed using index notation ([]). Array indices start from 0.
 - `No Built-in Size Tracking:` Arrays do not store information about their size internally, so the programmer must keep track of the size separately.
@@ -80,4 +82,16 @@ void bubbleSort(int arr[], int n) {
 - `Direct Access:`Like arrays, elements in vectors are accessed using index notation ([]). Vector indices also start from 0.
 - `Size Tracking:`Vectors store their current size internally, so you can retrieve the size of a vector using the size() member function.
 - `Dynamic Resizing:`Vectors support dynamic resizing using operations like push_back(), pop_back(), resize(), etc., which allows them to grow or shrink as needed.
-- `Versatility:`Vectors are more versatile than arrays in terms of functionality and can be passed to functions more easily (as they carry their size with them).
+- `Versatility:`Vectors are more versatile than arrays in terms of functionality and can be passed to functions more easily (as they carry their size with them). -->
+
+### PRE-REQUISITE
+
+- Array
+- stack
+- queue
+- HashTable
+
+python concepts
+
+- function scope
+- class basics
