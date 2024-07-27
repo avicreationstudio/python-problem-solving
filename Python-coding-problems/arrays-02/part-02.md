@@ -112,3 +112,5 @@ int main() {
     - If nums[mid] is `1`, just move `mid` forward to keep it in place.
     - If nums[mid] is `2`, swap it with `nums[high]` to move `2` to the end and decrement `high`.
 1. `Result:` After the loop, the array is sorted such that all `0`s come first, followed by all `1`s, and then all `2`s.
+
+tabulation 

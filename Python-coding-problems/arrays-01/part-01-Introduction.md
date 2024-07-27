@@ -2,8 +2,10 @@
 
 ## TIME complexity
 
-Time complexity refers to the amount of time an algorithm takes to complete
-as a function of the size of the input. It is typically expressed using Big O notation,
+Time complexity refers to the amount of time an algorithm takes to complete as a function of the size of the input.
+Its not about time taken, but is about growth rate of algorithm.
+
+It is typically expressed using Big O notation,
 which describes the upper bound of the algorithm's running time.
 
 In simple term we can say, time complexity is not about amount of time taken, But it is about growth rate.
@@ -21,6 +23,7 @@ In simple term we can say, time complexity is not about amount of time taken, Bu
 ## SPACE complexity
 
 Space complexity refers to the amount of memory an algorithm uses in relation to the size of the input.
+Extra amount of space required to run a program.
 
 ### Array
 

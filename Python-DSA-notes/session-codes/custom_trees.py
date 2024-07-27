@@ -76,7 +76,7 @@ def postorder_iterative(root):
 	travel.append(curr)
 	while len(travel) != 0:
 		curr = travel.pop()
-		ans.append(curr.z)
+		ans.append(curr.data)
 		if curr.left:
 			travel.append(curr.left) 
 		if curr.right:

@@ -9,7 +9,6 @@ graph = {
 	6: []
 }
 
-
 def bft(graph,node):
 	# breath first traversal
 	queue = deque()
@@ -24,7 +23,6 @@ def bft(graph,node):
 				queue.appendleft(neighbour)
 				visited.add(neighbour)
 		
-
 visited = set()
 
 def dft(graph,node):
@@ -34,12 +32,6 @@ def dft(graph,node):
 		visited.add(node)
 		for neighbour in graph[node]:
 			dft(graph,neighbour)
-
-
-
-
-
-
 
 
 print("bft")
